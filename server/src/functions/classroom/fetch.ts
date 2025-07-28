@@ -17,7 +17,6 @@ export async function fetchAll<T>(
   return data;
 }
 
-// TODO:
 export async function xfetch<T>(
   token: string, 
   endpoint: string,
@@ -27,7 +26,7 @@ export async function xfetch<T>(
   const start = performance.now();
   oauth2Client.setCredentials({ refresh_token: token });
   const keys = endpoint.split('.');
-  const target = keys.reduce((target, key) => target[key], classroom);
+  const target = keys.reduce((target: any, key: string) => target[key], classroom);
   const res = await target.list({
     auth: oauth2Client,
     pageSize: 20, // TODO:

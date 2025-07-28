@@ -10,7 +10,6 @@ export async function fetchAll(token, endpoint, callback, params = {}) {
     }
     return data;
 }
-// TODO:
 export async function xfetch(token, endpoint, callback, params = {}) {
     const start = performance.now();
     oauth2Client.setCredentials({ refresh_token: token });

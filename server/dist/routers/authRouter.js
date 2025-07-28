@@ -14,8 +14,8 @@ authRouter.get('/api/classroom/login', asyncHandler(async (req, res) => {
     res.redirect(authUrl);
 }));
 authRouter.get('/oauth2callback', asyncHandler(async (req, res) => {
-    let q = url.parse(req.url, true).query; // just to get it to shut up bc idk what the issue is
-    let { tokens } = await oauth2Client.getToken(q.code);
+    let q = url.parse(req.url, true).query;
+    let { tokens } = await oauth2Client.getToken(q.code); // TODO: remove the as string anx fix typing
     res.cookie('refresh_token', tokens.refresh_token, {
         httpOnly: true,
         secure: true,
@@ -39,7 +39,7 @@ authRouter.get('/api/oauth/token', asyncHandler(async (req, res) => {
     const data = await response.json();
     res.json(data);
 }));
-// TODO:
+// TODO: login routes
 authRouter.post('/api/canvas/login', asyncHandler(async (req, res) => {
     const token = req.body.token;
     // const user = await authenticateCanvas(token); // TODO: do later
@@ -58,14 +58,12 @@ authRouter.get('/api/classroom/auth', asyncHandler(async (req, res) => {
     res.json(!!req.cookies.refresh_token);
 }));
 // TODO: this doesnt seem like best practices
-async function authenticateCanvas(token) {
-    if (!token)
-        return undefined;
-    const res = await fetch('https://mvla.instructure.com/api/v1/users/self', {
-        headers: { Authorization: `Bearer ${token}` }
-    });
-    if (!res.ok)
-        throw new Error('Failed to authenticate user.');
-    const data = await res.json();
-    return data;
-}
+// async function authenticateCanvas(token: string) {
+//   if (!token) return undefined;
+//   const res = await fetch('https://mvla.instructure.com/api/v1/users/self', {
+//     headers: { Authorization: `Bearer ${token}` }
+//   });
+//   if (!res.ok) throw new Error('Failed to authenticate user.');
+//   const data = await res.json();
+//   return data;
+// }
