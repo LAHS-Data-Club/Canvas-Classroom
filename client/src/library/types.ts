@@ -27,6 +27,18 @@ export interface Assignment {
   origin: 'canvas' | 'classroom';
 }
 
+export interface CourseMaterial {
+  id: string;
+  title: string;
+  courseId: string;
+  moduleId: string | null;
+  description: string;
+  materials: any; // TODO
+  url: string;
+  origin: 'canvas' | 'classroom';
+}
+
+
 // type: Assignment, subheader, externalurl, (other?)
 export interface ModuleItem {
   id: string,

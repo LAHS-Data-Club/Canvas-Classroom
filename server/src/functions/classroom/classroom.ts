@@ -25,7 +25,7 @@ export async function getClassroomModules(
     { courseId }
   );
 }
-2
+
 export async function getClassroomAssignmentPage(
   token: string, 
   courseId: string,
