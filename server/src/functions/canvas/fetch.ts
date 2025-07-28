@@ -1,5 +1,7 @@
 // TODO: really dubious typescript but um its ok maybe...
 
+import { parse } from "path";
+
 const BASE = 'https://mvla.instructure.com';
 
 // export async function fetchAll<T>(
@@ -46,6 +48,12 @@ const BASE = 'https://mvla.instructure.com';
 //   return { data, linkHeader }
 // }
 
+interface LinkHeader {
+  next?: number | null;
+  prev?: number | null;
+  curr?: number | null,
+}
+
 export async function fetchAll<T>(
   token: string,
   endpoint: string,
@@ -89,13 +97,12 @@ export async function xfetch<T>(
   const headers = res.headers.get('link')?.split(',');
   const curr = headers
     ?.find((l) => l.includes('rel="current"'))
-    ?.match(/page=(\d+)/)?.[1];
+    ?.match(/page=(\d+)/)?.[1] as string;
 
-  const pageInfo = { curr: curr ? parseInt(curr) : null }
+  const pageInfo: LinkHeader = { curr: parseInt(curr) };
   if (headers && data.length) { 
     if (headers.find((h) => h.includes('rel="next"'))) pageInfo.next = parseInt(curr) + 1;
     if (headers.find((h) => h.includes('rel="prev"'))) pageInfo.prev = parseInt(curr) - 1;
   }
-
   return { data, linkHeader: pageInfo }
 }

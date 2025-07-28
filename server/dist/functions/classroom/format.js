@@ -20,9 +20,9 @@ export function formatClassroomAssignments(res) {
     return res.courseWork.map((item) => {
         const materials = item.materials?.map(formatMaterials);
         const keys = { ...item.dueDate, ...item.dueTime };
-        const date = item.dueDate ? // TODO: this seems silly
-            DateTime.utc(...Object.values(keys)).toLocal().toISO() :
-            null;
+        const date = item.dueDate
+            ? DateTime.utc(...Object.values(keys)).toLocal().toISO() // TODO: dubiously written but wtv
+            : null;
         return ({
             id: item.id,
             courseId: item.courseId,

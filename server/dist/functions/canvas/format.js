@@ -1,5 +1,7 @@
 import { DateTime } from 'luxon';
-// TODO: all the dubious any types...
+// TODO: all the dubious any types... ignore the any spam um idk what to do unless i literally copy paste all the canvas types
+// which i might do ig...
+// TODO: just getting it to shut up for now
 export function formatCanvasCourses(res) {
     return res
         .filter((c) => c.access_restricted_by_date !== false)

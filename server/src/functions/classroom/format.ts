@@ -1,9 +1,10 @@
-import { DateTime } from 'luxon';
+import { DateTime, LocaleOptions } from 'luxon';
+import { classroom_v1 } from 'googleapis';
 import type { Course, Module, Assignment, ModuleItem } from '../../library/types';
 
 
 export function formatClassroomCourses(res: any): Course[] { 
-  return res.courses.map((item) => ({
+  return res.courses.map((item: classroom_v1.Schema$Course) => ({
     id: item.id,
     name: item.name,
     url: item.alternateLink,
@@ -15,7 +16,7 @@ export function formatClassroomModules(
   res: any, 
   courseId: string
 ): Module[] {
-  return res.topic?.map((item) => ({
+  return res.topic?.map((item: classroom_v1.Schema$Topic) => ({
     id: item.topicId!,
     courseId: courseId,
     name: item.name,
@@ -27,12 +28,12 @@ export function formatClassroomModules(
 export function formatClassroomAssignments(
   res: any
 ): Assignment[] {
-  return res.courseWork.map((item) => {
+  return res.courseWork.map((item: classroom_v1.Schema$CourseWork) => {
     const materials = item.materials?.map(formatMaterials);
-    const keys = {...item.dueDate, ...item.dueTime};
-    const date = item.dueDate ?  // TODO: this seems silly
-      DateTime.utc(...Object.values(keys)).toLocal().toISO() :
-      null;
+    const keys = {...item.dueDate, ...item.dueTime} as LocaleOptions;
+    const date = item.dueDate 
+      ? DateTime.utc(...Object.values(keys)).toLocal().toISO() // TODO: dubiously written but wtv
+      : null;
     return ({
       id: item.id, 
       courseId: item.courseId,
@@ -48,7 +49,7 @@ export function formatClassroomAssignments(
   });
 }
 
-function formatMaterials(item) {
+function formatMaterials(item: classroom_v1.Schema$Material) {
   const type = Object.keys(item)[0];
   const attachments = (type === 'driveFile') ?
     item.driveFile?.driveFile :
