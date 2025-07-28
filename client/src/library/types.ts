@@ -38,6 +38,15 @@ export interface CourseMaterial {
   origin: 'canvas' | 'classroom';
 }
 
+// export interface Material {
+
+// }
+
+
+
+
+
+
 
 // type: Assignment, subheader, externalurl, (other?)
 export interface ModuleItem {

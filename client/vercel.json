@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://laughing-journey-5ekp.onrender.com/api/$1"
+    }
+  ]
+}

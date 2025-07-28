@@ -39,6 +39,14 @@ export async function getClassroomAssignmentPage(
   );
 }
 
+// export async function getClassroomCourseMaterialPage(
+//   token: string, 
+//   courseId: string,
+//   pageToken: string
+// ): Promise<{ data: ModuleItem[], linkHeader: any }> {
+  
+// }
+
 // export async function getAssignmentSubmission(
 //   token: string, 
 //   courseId: string, 
