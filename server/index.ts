@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(path.join(__dirname, '../client', 'dist')));
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // TODO: planner, not sure how to do that
 // TODO: i forgot about the whole rel=last scenario ; maybe use that instead we'll see
@@ -63,9 +63,9 @@ app.get('/api/courses/:courseId/modules/:moduleId/items',
     ).then((data) => res.json(data));
 }));
 
-app.get('/{*any}', asyncHandler(async (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));  
+app.get('/{*any}',  asyncHandler(async (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 }));
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
