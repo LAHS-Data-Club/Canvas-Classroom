@@ -59,7 +59,7 @@ export default function ClassPage() {
           </div>
         </div>
 
-        <main className="flex-1 px-10 py-8 max-w-7xl mx-auto w-full">
+        <main className="w-3/4 pt-10 pl-20">
           {activeTab === 'assignments' ? (
             <AssignmentsList {...assignmentQuery} />
           ) : (

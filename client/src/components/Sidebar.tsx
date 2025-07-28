@@ -24,7 +24,7 @@ export default function Sidebar({ courses }: Props) {
 
       <div className="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent mx-6 my-2"></div>
       
-      <div className="flex flex-col overflow-scroll p-6">
+      <div className="flex flex-col overflow-auto p-6">
         <h2 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">Your Courses</h2>
         <div className="space-y-2">
           {courses.map((course) => (

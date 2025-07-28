@@ -15,13 +15,13 @@ export function formatClassroomModules(
   res: any, 
   courseId: string
 ): Module[] {
-  return res.topic.map((item) => ({
+  return res.topic?.map((item) => ({
     id: item.topicId!,
     courseId: courseId,
     name: item.name,
     itemsCount: undefined,
     origin: 'classroom',
-  }));
+  })) || [];
 }
 
 export function formatClassroomAssignments(
