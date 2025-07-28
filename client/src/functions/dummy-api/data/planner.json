@@ -1,0 +1,48 @@
+{
+  "planner": [
+    {
+      "id": "180832",
+      "courseId": "8995",
+      "url": "https://mvla.instructure.com/courses/8995/assignments/180832",
+      "title": "Project Progress Update #4: -- Have this be a playable \"rough draft\" of your final submission",
+      "description": "<p>Please zip up your src folder .java files and submit as &lt;GameName&gt;Files.zip.</p>",
+      "materials": [],
+      "dueDate": "2025-05-28T08:00:00.000-07:00",
+      "points": 1,
+      "originLMS": "canvas"
+    },
+    {
+      "id": "180833",
+      "courseId": "8995",
+      "url": "https://mvla.instructure.com/courses/8995/assignments/180833",
+      "title": "Project Progress Update #5: Submit .zip of your unfinished Game",
+      "description": "<p>Please zip up your src folder .java files and submit as &lt;GameName&gt;Files.zip.</p>",
+      "materials": [],
+      "dueDate": "2025-05-30T23:59:59.000-07:00",
+      "points": 1,
+      "originLMS": "canvas"
+    },
+    {
+      "id": "180834",
+      "courseId": "8995",
+      "url": "https://mvla.instructure.com/courses/8995/assignments/180834",
+      "title": "Project Progress Update #6: Submit .zip of your unfinished Game",
+      "description": "<p>Please zip up your src folder .java files and submit as &lt;GameName&gt;Files.zip.</p>",
+      "materials": [],
+      "dueDate": "2025-06-02T23:59:59.000-07:00",
+      "points": 1,
+      "originLMS": "canvas"
+    },
+    {
+      "id": "180839",
+      "courseId": "8995",
+      "url": "https://mvla.instructure.com/courses/8995/assignments/180839",
+      "title": "Semester 2 Project Files Final Submission",
+      "description": "<div>\n<ul>\n<li><span><span style=\"background-color: #eccafa;\"><a class=\"instructure_file_link instructure_scribd_file inline_disabled\" title=\"Semester 2 Final Project.pdf\" href=\"https://mvla.instructure.com/courses/8995/files/2842815?verifier=OUyLViYH240yQEqLMS24TbOyvIUEmlVWr2wRVmeJ&amp;wrap=1\" target=\"_blank\" data-canvas-previewable=\"false\" data-api-endpoint=\"https://mvla.instructure.com/api/v1/courses/8995/files/2842815\" data-api-returntype=\"File\">Semester 2 Final Project.pdf</a> </span></span></li>\n<li>One thing that is <strong>optional, but strongly recommended for complicated games</strong>, games that people might not be familiar with): <strong><span style=\"background-color: #bfedd2;\">Game instructions / readme / printed out sheet</span>.</strong></li>\n<li><span>Another<strong> very strong recommendation</strong> is that you include a <span style=\"background-color: #c2e0f4;\"><strong>screen cast demonstrating your game play</strong></span> in your submission, in the case that your game does not run on other devices the way it does on your own (it <em>does</em> happen sometimes). &nbsp;</span> Doesn't have to be long but show any features you want to show.&nbsp;</li>\n</ul>\n</div>\n<div><span style=\"background-color: #f8cac6;\">--&gt; <strong>Please zip up your project folder <span style=\"text-decoration: underline;\">(.java files PLUS optional screen recording PLUS any image files, music files, information sheets, readmes, anything else needed for your game)</span> and submit as &lt;GameName&gt;Files.zip. </strong></span><br><br><strong>Again, If you forget to .zip the screen recording, or images, or any informational sheets etc, it might make the game very difficult to play/grade when it comes time for me to look at it. </strong></div>",
+      "materials": [],
+      "dueDate": "2025-06-05T08:30:00.000-07:00",
+      "points": 100,
+      "originLMS": "canvas"
+    }
+  ]
+}

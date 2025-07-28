@@ -1,0 +1,46 @@
+{
+  "modules": [
+    {
+      "id": "49931",
+      "name": "Unit 6 - Global Challenges",
+      "position": 1,
+      "items_count": 4
+    },
+    {
+      "id": "49475",
+      "name": "Unit 5 - Contemporary Life",
+      "position": 2,
+      "items_count": 6
+    },
+    {
+      "id": "48735",
+      "name": "Unit 4 - Science and Technology",
+      "position": 3,
+      "items_count": 6
+    },
+    {
+      "id": "48101",
+      "name": "Unit 3 - Influences of Beauty and Art",
+      "position": 4,
+      "items_count": 7
+    },
+    {
+      "id": "47766",
+      "name": "Unit 2 - Individual and Public Identities",
+      "position": 5,
+      "items_count": 4
+    },
+    {
+      "id": "47182",
+      "name": "Unit 1 - Family and Community",
+      "position": 6,
+      "items_count": 5
+    },
+    {
+      "id": "46965",
+      "name": "Unit 0 - Introduction to AP",
+      "position": 7,
+      "items_count": 2
+    }
+  ]
+}
